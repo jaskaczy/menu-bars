@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  overflow: hidden;
+  color: #fff;
+  background: #ff00cc; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+nav {
+  margin-top: 100px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  font-size: 24px;
+}
+
+.menu-item {
+  display: inline-block;
+  height: 100px;
+  width: 300px;
+  line-height: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: 5px solid rgb(85, 0, 255);
+  box-shadow: 3px 4px 6px 2px rgba(136, 0, 255, 0.636);
+  border-radius: 15px;
+}
+
+.menu-item:hover {
+  background-color: #363636;
+}
+
+.dropdown {
+  position: absolute;
+  width: 300px;
+}
+
+.dropdown li {
+  display: none;
+  background-color: #50515A;
+  opacity: 0;
+  transition: color 0.3;
+}
+
+.dropdown li:hover {
+  color: royalblue;
+}
+
+.menu-item:hover .dropdown li {
+  display: block;
+  animation: menu1 0.5s forwards;
+}
+
+.menu-item:hover .dropdown li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.menu-item:hover .dropdown li:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.menu-item:hover .dropdown li:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.menu-item:hover .dropdown li:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.menu-item:hover .dropdown li:nth-child(6) {
+  animation-delay: 1s;
+}
+
+@keyframes menu1 {
+  from {
+    opacity: 0;
+    transform: rotate(36deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+.two:hover .dropdown li {
+  display: block;
+  animation: menu2 0.5s forwards;
+}
+
+@keyframes menu2 {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.three:hover .dropdown li {
+  display: block;
+  animation: menu3 0.5s forwards;
+}
+
+@keyframes menu3 {
+  from {
+    opacity: 0;
+    transform: rotateY(-60deg) translateX(190px);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(0) translateX(0);
+  }
+}
+.four:hover .dropdown li {
+  display: block;
+  animation: menu4 0.5s forwards;
+  transform-origin: top;
+}
+
+@keyframes menu4 {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+}/*# sourceMappingURL=main.css.map */
